@@ -1,4 +1,4 @@
-myApp.controller( 'RegistrationController', [
+myApp.controller('RegistrationController', [
 	'$scope', 
 	'$firebaseAuth', 
 	'FIREBASE_URL', 
@@ -15,14 +15,17 @@ myApp.controller( 'RegistrationController', [
 
 	// registration success
 	$scope.register = function() {
+
 		// create user
 		auth.$createUser({
 			email: $scope.user.email,
 			password: $scope.user.password
-		}).then( function( regUser ) {	// return a promise with an object to make sure user is created
-			$scope.message = "Hi " + $scope.user.firstname + 'Thanks for register.';	// welcome msg
-		}).catch( function( err ) {		// catch error
-			$scope.message = err.message;	// error msg
+		}).then(function( regUser ) {	// return a promise with an object to make sure user is created
+			// welcome msg
+			$scope.message = "Hi " + $scope.user.firstname + 'Thanks for register.';
+		}).catch(function( err ) {		// catch error
+			// error msg
+			$scope.message = err.message;
 		});
 	} // register
 }]); // Controller
