@@ -1,3 +1,3 @@
-myApp.controller('SuccessController', ['$scope', function($scope) {		// pass $scope as dependency
+myApp.controller( 'SuccessController', [ '$scope', function( $scope ) {
 	$scope.message = 'Success!!';
 }]);

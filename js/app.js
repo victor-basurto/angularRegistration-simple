@@ -1,11 +1,11 @@
-var myApp = angular.module('myApp', 
-	['ngRoute', 'firebase'])
+var myApp = angular.module( 'myApp', 
+	[ 'ngRoute', 'firebase' ] )
 	.constant('FIREBASE_URL', 'https://angregistration2016.firebaseIO.com/');	// connection to database
 
 /**
  * MyApp Configuration / Routing
  */
-myApp.config(['$routeProvider', function($routeProvider) {
+myApp.config( ['$routeProvider', function( $routeProvider ) {
 	$routeProvider
 		.when('/login', {
 			templateUrl: './views/login.html',		// get login.html
