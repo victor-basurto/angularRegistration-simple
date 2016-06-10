@@ -3,13 +3,18 @@ myApp.controller('RegistrationController', [
 	'AuthenticationService',
 	function( $scope, AuthenticationService ) {	
 
-	// Login success
-	$scope.login = function() {
-		AuthenticationService.login( $scope.user );
-	} // login
+		// Login success
+		$scope.login = function() {
+			AuthenticationService.login( $scope.user );
+		} // login
 
-	// registration success
-	$scope.register = function() {
-		AuthenticationService.register( $scope.user );
-	} // register
+		// logout
+		$scope.logout = function() {
+			AuthenticationService.logout();
+		} // logout
+
+		// registration success
+		$scope.register = function() {
+			AuthenticationService.register( $scope.user );
+		} // register
 }]); // Controller
